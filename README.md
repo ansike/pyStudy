@@ -36,3 +36,9 @@ source ~/path/to/venv/bin/activate
 ```shell
 deactivate
 ```
+
+### 查看 migrate 命令
+
+```shell
+python manage.py sqlmigrate polls 0001
+```
