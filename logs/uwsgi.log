@@ -1,0 +1,305 @@
+*** Starting uWSGI 2.0.26 (64bit) on [Sun Jul 21 01:26:38 2024] ***
+compiled with version: Apple LLVM 15.0.0 (clang-1500.3.9.4) on 20 July 2024 08:47:57
+os: Darwin-23.5.0 Darwin Kernel Version 23.5.0: Wed May  1 20:13:18 PDT 2024; root:xnu-10063.121.3~5/RELEASE_ARM64_T6030
+nodename: GVJ7Q3PWH6
+machine: arm64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /Users/bytedance/code/study/pyStudy
+writing pidfile to uwsgi.pid
+detected binary path: /Users/bytedance/path/to/venv/bin/uwsgi
+chdir() to /Users/bytedance/code/study/pyStudy
+your processes number limit is 6000
+your memory page size is 16384 bytes
+detected max file descriptor number: 1048575
+lock engine: OSX spinlocks
+thunder lock: enabled
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 6
+Python version: 3.12.4 (main, Jun  6 2024, 18:26:44) [Clang 15.0.0 (clang-1500.3.9.4)]
+Python main interpreter initialized at 0x1020f5068
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 3505502 bytes (3423 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 87464)
+spawned uWSGI worker 1 (pid: 87478, cores: 2)
+spawned uWSGI worker 2 (pid: 87479, cores: 2)
+spawned uWSGI worker 3 (pid: 87480, cores: 2)
+spawned uWSGI worker 4 (pid: 87481, cores: 2)
+spawned uWSGI worker 5 (pid: 87482, cores: 2)
+spawned uWSGI worker 6 (pid: 87483, cores: 2)
+spawned uWSGI worker 7 (pid: 87484, cores: 2)
+spawned uWSGI worker 8 (pid: 87485, cores: 2)
+spawned uWSGI worker 9 (pid: 87486, cores: 2)
+spawned uWSGI worker 10 (pid: 87487, cores: 2)
+spawned uWSGI worker 11 (pid: 87488, cores: 2)
+spawned uWSGI worker 12 (pid: 87489, cores: 2)
+spawned uWSGI worker 13 (pid: 87490, cores: 2)
+spawned uWSGI worker 14 (pid: 87491, cores: 2)
+spawned uWSGI worker 15 (pid: 87492, cores: 2)
+spawned uWSGI worker 16 (pid: 87493, cores: 2)
+unable to stat() /Users/bytedance/code/study/pyStudy/logs/touchforlogrotate, events will be triggered as soon as the file is created
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87480 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87485 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87492 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87487 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87481 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87479 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87493 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87486 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87489 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87478 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87482 (default app)
+mountpoint  already configured. skip.
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87490 (default app)
+mountpoint  already configured. skip.
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87488 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87484 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87483 (default app)
+mountpoint  already configured. skip.
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1020f5068 pid: 87491 (default app)
+mountpoint  already configured. skip.
+Not Found: /
+[pid: 87480|app: 0|req: 1/1] 127.0.0.1 () {64 vars in 1375 bytes} [Sat Jul 20 17:26:51 2024] GET / => generated 2164 bytes in 19 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 87480|app: 0|req: 2/2] 127.0.0.1 () {64 vars in 1375 bytes} [Sat Jul 20 17:26:52 2024] GET / => generated 2164 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 87480|app: 0|req: 3/3] 127.0.0.1 () {62 vars in 1356 bytes} [Sat Jul 20 17:27:00 2024] GET /admin/ => generated 9874 bytes in 36 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+
+
+
+
+
+
+
+
+[pid: 87480|app: 0|req: 4/4] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:27:28 2024] GET /admin/ => generated 9874 bytes in 12 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 87493|app: 0|req: 1/5] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:27:28 2024] GET /admin/ => generated 9874 bytes in 46 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 1)
+[pid: 87480|app: 0|req: 5/6] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:27:28 2024] GET /admin/ => generated 9874 bytes in 10 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 87493|app: 0|req: 2/7] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:27:28 2024] GET /admin/ => generated 9874 bytes in 10 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+worker 16 buried after 1 seconds
+worker 15 buried after 1 seconds
+worker 14 buried after 1 seconds
+worker 13 buried after 1 seconds
+worker 12 buried after 1 seconds
+worker 11 buried after 1 seconds
+worker 10 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 4 buried after 1 seconds
+[deadlock-detector] pid 87480 was holding lock thunder (0x101130000)
+worker 3 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+*** Starting uWSGI 2.0.26 (64bit) on [Sun Jul 21 01:27:47 2024] ***
+compiled with version: Apple LLVM 15.0.0 (clang-1500.3.9.4) on 20 July 2024 08:47:57
+os: Darwin-23.5.0 Darwin Kernel Version 23.5.0: Wed May  1 20:13:18 PDT 2024; root:xnu-10063.121.3~5/RELEASE_ARM64_T6030
+nodename: GVJ7Q3PWH6
+machine: arm64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /Users/bytedance/code/study/pyStudy
+writing pidfile to uwsgi.pid
+detected binary path: /Users/bytedance/path/to/venv/bin/uwsgi
+chdir() to /Users/bytedance/code/study/pyStudy
+your processes number limit is 6000
+your memory page size is 16384 bytes
+detected max file descriptor number: 1048575
+lock engine: OSX spinlocks
+thunder lock: enabled
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 6
+Python version: 3.12.4 (main, Jun  6 2024, 18:26:44) [Clang 15.0.0 (clang-1500.3.9.4)]
+Python main interpreter initialized at 0x103da9068
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 3505502 bytes (3423 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 87742)
+spawned uWSGI worker 1 (pid: 87756, cores: 2)
+spawned uWSGI worker 2 (pid: 87757, cores: 2)
+spawned uWSGI worker 3 (pid: 87758, cores: 2)
+spawned uWSGI worker 4 (pid: 87759, cores: 2)
+spawned uWSGI worker 5 (pid: 87760, cores: 2)
+spawned uWSGI worker 6 (pid: 87761, cores: 2)
+spawned uWSGI worker 7 (pid: 87762, cores: 2)
+spawned uWSGI worker 8 (pid: 87763, cores: 2)
+spawned uWSGI worker 9 (pid: 87764, cores: 2)
+spawned uWSGI worker 10 (pid: 87766, cores: 2)
+spawned uWSGI worker 11 (pid: 87767, cores: 2)
+spawned uWSGI worker 12 (pid: 87768, cores: 2)
+spawned uWSGI worker 13 (pid: 87770, cores: 2)
+spawned uWSGI worker 14 (pid: 87771, cores: 2)
+spawned uWSGI worker 15 (pid: 87772, cores: 2)
+spawned uWSGI worker 16 (pid: 87773, cores: 2)
+unable to stat() /Users/bytedance/code/study/pyStudy/logs/touchforlogrotate, events will be triggered as soon as the file is created
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87764 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87770 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87763 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87757 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87759 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87756 (default app)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87761 (default app)
+mountpoint  already configured. skip.
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87773 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87766 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87758 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87771 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87768 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x103da9068 pid: 87760 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x103da9068 pid: 87767 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x103da9068 pid: 87762 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x103da9068 pid: 87772 (default app)
+mountpoint  already configured. skip.
+[pid: 87764|app: 0|req: 1/1] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:27:57 2024] GET /admin/ => generated 143 bytes in 30 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 87770|app: 0|req: 1/2] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:27:58 2024] GET /admin/ => generated 143 bytes in 26 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 87770|app: 0|req: 2/3] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:27:58 2024] GET /admin/ => generated 143 bytes in 13 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 1)
+[pid: 87770|app: 0|req: 3/4] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:27:58 2024] GET /admin/ => generated 143 bytes in 3 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 87772|app: 0|req: 1/5] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:27:58 2024] GET /admin/ => generated 143 bytes in 24 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 1)
+*** Starting uWSGI 2.0.26 (64bit) on [Sun Jul 21 01:28:05 2024] ***
+compiled with version: Apple LLVM 15.0.0 (clang-1500.3.9.4) on 20 July 2024 08:47:57
+os: Darwin-23.5.0 Darwin Kernel Version 23.5.0: Wed May  1 20:13:18 PDT 2024; root:xnu-10063.121.3~5/RELEASE_ARM64_T6030
+nodename: GVJ7Q3PWH6
+machine: arm64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /Users/bytedance/code/study/pyStudy
+writing pidfile to uwsgi.pid
+detected binary path: /Users/bytedance/path/to/venv/bin/uwsgi
+chdir() to /Users/bytedance/code/study/pyStudy
+your processes number limit is 6000
+your memory page size is 16384 bytes
+detected max file descriptor number: 1048575
+lock engine: OSX spinlocks
+thunder lock: enabled
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+[pid: 87764|app: 0|req: 2/6] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:28:07 2024] GET /admin/ => generated 143 bytes in 14 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 1)
+[pid: 87764|app: 0|req: 3/7] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:28:07 2024] GET /admin/ => generated 143 bytes in 11 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 1)
+[pid: 87764|app: 0|req: 4/8] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:28:07 2024] GET /admin/ => generated 143 bytes in 12 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 1)
+[pid: 87764|app: 0|req: 5/9] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:28:08 2024] GET /admin/ => generated 143 bytes in 11 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 1)
+[pid: 87764|app: 0|req: 6/10] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:29:20 2024] GET /admin/ => generated 143 bytes in 16 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 1)
+[pid: 87764|app: 0|req: 7/11] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:29:21 2024] GET /admin/ => generated 143 bytes in 11 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 1)
+[pid: 87764|app: 0|req: 8/12] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:29:21 2024] GET /admin/ => generated 143 bytes in 11 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 1)
+[pid: 87764|app: 0|req: 9/13] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:29:21 2024] GET /admin/ => generated 143 bytes in 11 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 1)
+*** Starting uWSGI 2.0.26 (64bit) on [Sun Jul 21 01:29:53 2024] ***
+compiled with version: Apple LLVM 15.0.0 (clang-1500.3.9.4) on 20 July 2024 08:47:57
+os: Darwin-23.5.0 Darwin Kernel Version 23.5.0: Wed May  1 20:13:18 PDT 2024; root:xnu-10063.121.3~5/RELEASE_ARM64_T6030
+nodename: GVJ7Q3PWH6
+machine: arm64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /Users/bytedance/code/study/pyStudy
+writing pidfile to uwsgi.pid
+detected binary path: /Users/bytedance/path/to/venv/bin/uwsgi
+chdir() to /Users/bytedance/code/study/pyStudy
+your processes number limit is 6000
+your memory page size is 16384 bytes
+detected max file descriptor number: 1048575
+lock engine: OSX spinlocks
+thunder lock: enabled
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 6
+Python version: 3.12.4 (main, Jun  6 2024, 18:26:44) [Clang 15.0.0 (clang-1500.3.9.4)]
+Python main interpreter initialized at 0x1056dd068
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 3505502 bytes (3423 KB) for 32 cores
+*** Operational MODE: preforking+threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 88269)
+spawned uWSGI worker 1 (pid: 88283, cores: 2)
+spawned uWSGI worker 2 (pid: 88284, cores: 2)
+spawned uWSGI worker 3 (pid: 88285, cores: 2)
+spawned uWSGI worker 4 (pid: 88286, cores: 2)
+spawned uWSGI worker 5 (pid: 88287, cores: 2)
+spawned uWSGI worker 6 (pid: 88288, cores: 2)
+spawned uWSGI worker 7 (pid: 88290, cores: 2)
+spawned uWSGI worker 8 (pid: 88291, cores: 2)
+spawned uWSGI worker 9 (pid: 88292, cores: 2)
+spawned uWSGI worker 10 (pid: 88293, cores: 2)
+spawned uWSGI worker 11 (pid: 88295, cores: 2)
+spawned uWSGI worker 12 (pid: 88296, cores: 2)
+spawned uWSGI worker 13 (pid: 88297, cores: 2)
+spawned uWSGI worker 14 (pid: 88298, cores: 2)
+spawned uWSGI worker 15 (pid: 88299, cores: 2)
+spawned uWSGI worker 16 (pid: 88300, cores: 2)
+unable to stat() /Users/bytedance/code/study/pyStudy/logs/touchforlogrotate, events will be triggered as soon as the file is created
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88284 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88287 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88297 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88292 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88300 (default app)
+mountpoint  already configured. skip.
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88286 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88288 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88285 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88290 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88291 (default app)
+mountpoint  already configured. skip.
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88299 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88295 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88296 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88293 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88283 (default app)
+mountpoint  already configured. skip.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1056dd068 pid: 88298 (default app)
+mountpoint  already configured. skip.
+[pid: 88284|app: 0|req: 1/1] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:29:56 2024] GET /admin/ => generated 9874 bytes in 42 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 88284|app: 0|req: 2/2] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:29:57 2024] GET /admin/ => generated 9874 bytes in 11 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 88286|app: 0|req: 1/3] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:29:57 2024] GET /admin/ => generated 9874 bytes in 29 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 88290|app: 0|req: 1/4] 127.0.0.1 () {64 vars in 1387 bytes} [Sat Jul 20 17:30:04 2024] GET /admin/ => generated 9874 bytes in 28 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 88284|app: 0|req: 3/5] 127.0.0.1 () {64 vars in 1431 bytes} [Sat Jul 20 17:30:07 2024] GET /admin/polls/choice/ => generated 10303 bytes in 24 msecs (HTTP/1.1 200) 10 headers in 471 bytes (1 switches on core 0)
+[pid: 88288|app: 0|req: 1/6] 127.0.0.1 () {60 vars in 1237 bytes} [Sat Jul 20 17:30:07 2024] GET /admin/jsi18n/ => generated 3342 bytes in 15 msecs (HTTP/1.1 200) 7 headers in 230 bytes (1 switches on core 1)
+[pid: 88293|app: 0|req: 1/7] 127.0.0.1 () {62 vars in 1356 bytes} [Sat Jul 20 17:30:10 2024] GET /admin/ => generated 9874 bytes in 34 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 88297|app: 0|req: 1/8] 127.0.0.1 () {62 vars in 1356 bytes} [Sat Jul 20 17:30:17 2024] GET /polls/ => generated 269 bytes in 19 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
