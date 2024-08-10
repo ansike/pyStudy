@@ -6,6 +6,9 @@ from django.views import generic
 from django.utils import timezone
 from polls.models import Question, Choice
 from django.urls import reverse
+import logging
+
+logger = logging.getLogger(__name__)
 
 # Create your views here.
 
@@ -48,10 +51,13 @@ from django.urls import reverse
 class IndexView(generic.ListView):
     template_name = "polls/index.html"
     context_object_name = "latest_question_list"
+    logger.info("index view")
 
     def get_queryset(self):
         """Return the last five published questions."""
-        return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[:5]
+        return Question.objects.filter(pub_date__lte=timezone.now()).order_by(
+            "-pub_date"
+        )[:5]
 
 
 class DetailView(generic.DetailView):

@@ -1,3 +1,32 @@
+# 依赖安装
+
+### mysql
+
+```shell
+# 启动docker服务
+docker run -p 3307:3306 --name=mysql-3307 -e MYSQL_ROOT_PASSWORD=123456 -v ~/data/mysql/3307:/var/lib/mysql -d mysql:8
+# 连接数据库
+mysql -uroot -h127.0.0.1 -p123456 -P3307
+```
+
+### 执行数据插入操作
+
+```sql
+CREATE DATABASE `pystudy` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER 'pystudy'@'%' IDENTIFIED BY 'pystudy@2024!';
+GRANT ALL ON pystudy.* TO 'pystudy'@'%';
+FLUSH PRIVILEGES;
+```
+
+### 安装 py module
+
+```shell
+pip3 freeze > requirements.txt
+pip install -r requirements.txt
+```
+
+# 开发
+
 ### 进入 env 环境
 
 ```shell
@@ -107,7 +136,6 @@ uwsgi --stop uwsgi.pid
             uwsgi_pass 127.0.0.1:8001; #端口要和uwsgi里配置的一样
             uwsgi_param UWSGI_SCRIPT pyStudy.wsgi; #wsgi.py所在的目录名+.wsgi
             uwsgi_param UWSGI_CHDIR /Users/bytedance/code/study/pyStudy/; #项目路径
-
         }
         location /static/ {
             alias /Users/bytedance/code/study/pyStudy/static/; #静态资源路径
@@ -122,4 +150,12 @@ uwsgi --stop uwsgi.pid
             root html;
         }
     }
+```
+
+### admin 账号
+
+```shell
+# 创建超管帐号
+python3 manage.py createsuperuser
+# pystudy/pystudyPassword@123
 ```

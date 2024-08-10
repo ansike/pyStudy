@@ -12,22 +12,29 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-k$ws9_2gtcxtf(_usfp*pdv!11&vx#0&hjn*gtotny^_6tv@)x"
+SECRET_KEY = env("SECRET_KEY", default="django-insecure-3+y#y7g*14$*y6#3j=5y+(zf3$9+@)+4z=5&4^&*@^#-g$v=y")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = env("DEBUG", default=True)
 
-ALLOWED_HOSTS = ['*', ]
+ALLOWED_HOSTS = [
+    "*",
+]
 
 # Application definition
 
@@ -77,8 +84,11 @@ WSGI_APPLICATION = "pyStudy.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": env("MYSQL_NAME", default="pystudy"),
+        "USER": env("MYSQL_USER", default="pystudy"),
+        "PASSWORD": env("MYSQL_PASSWORD", default="pystudy@2024!"),
+        "PORT": env("MYSQL_PORT", default="3307"),
     }
 }
 
@@ -127,3 +137,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")  # 用于处理静态文件
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, "media")  # 用于处理上传的文件
+
+print("[DEBUG]", DEBUG)
+print("[SECRET_KEY]", SECRET_KEY)
