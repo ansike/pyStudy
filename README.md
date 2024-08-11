@@ -12,8 +12,8 @@ mysql -uroot -h127.0.0.1 -p123456 -P3307
 ### 执行数据插入操作
 
 ```sql
-CREATE DATABASE `pystudy` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-CREATE USER 'pystudy'@'%' IDENTIFIED BY 'pystudy@2024!';
+CREATE DATABASE `pystudy` IF NOT EXISTS DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER 'pystudy'@'%' IF NOT EXISTS IDENTIFIED BY 'pystudy@2024!';
 GRANT ALL ON pystudy.* TO 'pystudy'@'%';
 FLUSH PRIVILEGES;
 ```
@@ -158,4 +158,10 @@ uwsgi --stop uwsgi.pid
 # 创建超管帐号
 python3 manage.py createsuperuser
 # pystudy/pystudyPassword@123
+```
+
+### 打包 docker 镜像
+
+```shell
+docker build -f Dockerfile . -t ansike/pystudy:latest
 ```

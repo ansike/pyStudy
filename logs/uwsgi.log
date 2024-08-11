@@ -570,3 +570,6 @@ mountpoint  already configured. skip.
 [pid: 97264|app: 0|req: 78/80] 127.0.0.1 () {64 vars in 1343 bytes} [Fri Aug  9 07:28:32 2024] GET /polls/ => generated 338 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 1)
 [pid: 97264|app: 0|req: 79/81] 127.0.0.1 () {64 vars in 1343 bytes} [Fri Aug  9 07:28:32 2024] GET /polls/ => generated 338 bytes in 56 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 1)
 [pid: 97264|app: 0|req: 80/82] 127.0.0.1 () {64 vars in 1343 bytes} [Fri Aug  9 07:28:32 2024] GET /polls/ => generated 338 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 207 bytes (2 switches on core 1)
+...brutally killing workers...
+worker 11 buried after 1 seconds
+worker 10 buried after 1 seconds

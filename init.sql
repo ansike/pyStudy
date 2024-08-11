@@ -1,0 +1,4 @@
+CREATE DATABASE IF NOT EXISTS `pystudy` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER IF NOT EXISTS 'pystudy'@'%' IDENTIFIED BY 'pystudy@2024!';
+GRANT ALL ON pystudy.* TO 'pystudy'@'%';
+FLUSH PRIVILEGES;

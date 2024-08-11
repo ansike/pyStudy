@@ -12,25 +12,19 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
-import environ
-
-env = environ.Env()
-environ.Env.read_env()
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-# Take environment variables from .env file
-environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY", default="django-insecure-3+y#y7g*14$*y6#3j=5y+(zf3$9+@)+4z=5&4^&*@^#-g$v=y")
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY", "django-insecure-3+y#y7g*14$*y6#3j=5y+(zf3$9+@)+4z=5&4^&*@^#-g$v=y"
+)
 
-DEBUG = env("DEBUG", default=True)
+DEBUG = os.environ.get("DEBUG", True)
 
 ALLOWED_HOSTS = [
     "*",
@@ -82,16 +76,22 @@ WSGI_APPLICATION = "pyStudy.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+print(os.environ.get("MYSQL_HOST", "0.0.0.0"))
+print(os.environ.get("MYSQL_PORT"))
+print(os.environ.get("MYSQL_USER"))
+print(os.environ.get("MYSQL_PASSWORD"))
+print(os.environ.get("MYSQL_NAME"))
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": env("MYSQL_NAME", default="pystudy"),
-        "USER": env("MYSQL_USER", default="pystudy"),
-        "PASSWORD": env("MYSQL_PASSWORD", default="pystudy@2024!"),
-        "PORT": env("MYSQL_PORT", default="3307"),
+        "HOST": os.environ.get("MYSQL_HOST", "0.0.0.0"),
+        "NAME": os.environ.get("MYSQL_NAME", "pystudy"),
+        "USER": os.environ.get("MYSQL_USER", "pystudy"),
+        "PASSWORD": os.environ.get("MYSQL_PASSWORD", "pystudy@2024!"),
+        "PORT": os.environ.get("MYSQL_PORT", "3307"),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
