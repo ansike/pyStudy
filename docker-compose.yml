@@ -1,6 +1,11 @@
 volumes:
   app-data:
-  db-data:
+  db-data: 
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ~/data/db
 
 networks:
   mynetwork:
@@ -8,9 +13,12 @@ networks:
 
 services:
   app:
-    build: 
-      context: ./app
-      dockerfile: Dockerfile
+    image: pystudy/app:1.0.2
+    # build: 
+    #   context: ./app
+    #   dockerfile: Dockerfile
+    #   args:
+    #     APP_VERSION: 1.0.1
     entrypoint: /app/docker-entrypoint.sh
     volumes:
       - app-data:/app

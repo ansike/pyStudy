@@ -22,7 +22,7 @@ FLUSH PRIVILEGES;
 
 ```shell
 pip3 freeze > requirements.txt
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 # 开发
