@@ -1,18 +1,20 @@
-version: '2.28.1'
+volumes:
+  app-data:
+  db-data:
+
+networks:
+  mynetwork:
+    driver: bridge
+
 services:
   app:
-    image: ansike/pystudy
+    build: 
+      context: ./app
+      dockerfile: Dockerfile
+    entrypoint: /app/docker-entrypoint.sh
     volumes:
-      - app-data:/app/
-    # command: /bin/bash /app/start.sh
-    # command: sleep 3600
-    # scp /app/nginx.conf nginx:/etc/nginx/nginx.conf
-    command: 
-      - /bin/sh
-      - -c
-      - |
-        sh ./start.sh
-        sleep 3600
+      - app-data:/app
+    command: uwsgi --ini uwsgi.ini
     environment:
       - PORT=8000
       - MYSQL_HOST=db
@@ -21,20 +23,24 @@ services:
       - MYSQL_PASSWORD=pystudy@2024!
       - MYSQL_NAME=pystudy
       - DEBUG=false
+
+      # 设置 superuser
+      - DJANGO_SUPERUSER_USERNAME=admin
+      - DJANGO_SUPERUSER_PASSWORD=admin1234
+      - DJANGO_SUPERUSER_EMAIL=admin@pystudy.com
     networks:
       - mynetwork
-    ports:
-      - 8001:8001
     depends_on:
       db:
         condition: service_healthy
   nginx:
-    image: nginx:latest
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
     ports:
-      - 9001:8000
+      - 9001:80
     volumes:
-      - app-data/nginx.conf:/etc/nginx/
-      - app-data/static:/usr/share/nginx/html
+      - app-data:/app
     networks:
       - mynetwork
     depends_on:
@@ -42,22 +48,26 @@ services:
   db:
     image: mysql:8
     volumes:
-       - ./init.sql:/docker-entrypoint-initdb.d/mysql-init.sql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/mysql-init.sql
+      - db-data:/var/lib/mysql
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=mysql8123asd
     networks:
       - mynetwork
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      test:
+        [
+          "CMD",
+          "mysqladmin",
+          "ping",
+          "-h",
+          "localhost",
+          "-u",
+          "root",
+          "-p${MYSQL_ROOT_PASSWORD}",
+        ]
       interval: 10s
       timeout: 5s
       retries: 3
       start_period: 30s
-
-    
-networks:
-  mynetwork:
-    driver: bridge
-volumes:
-  app-data:

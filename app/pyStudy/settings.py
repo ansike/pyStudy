@@ -134,9 +134,9 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# STATIC_ROOT = os.path.join(BASE_DIR, "static")  # 用于处理静态文件
+STATIC_ROOT = os.path.join(BASE_DIR, "static")  # 用于处理静态文件
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, "media")  # 用于处理上传的文件
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")  # 用于处理上传的文件
 
 print("[DEBUG]", DEBUG)
 print("[SECRET_KEY]", SECRET_KEY)
